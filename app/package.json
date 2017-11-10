@@ -1,0 +1,15 @@
+{
+  "name": "songs_app",
+  "version": "1.0.0",
+  "description": "Display songs",
+  "author": "_",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "jsonfile": "^2.4.0",
+    "mongoose": "^4.13.0"
+  }
+}

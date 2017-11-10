@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="songsEvents">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Displayed songs</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/simple-sidebar.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div id="wrapper" ng-controller="indexController">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a ng-href="/">
+                        New action
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            
+    
+            <div class="container">
+                <!-- Portfolio Item Heading -->
+                <div class="row">
+                    <div class="col-lg-3">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Show/Hide users</a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- Footer -->
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12">
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </footer>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Angular -->
+    <script src="/angular/angular.js"></script>
+    <script src="/angularRoute/angular-route.js"></script>
+    <script src="/ui-angular/ui-bootstrap.js"></script>
+    <script src="/ui-angular/ui-bootstrap-tpls.js"></script>
+
+    <!-- App -->
+    <script src="/public/songsEvents.js"></script>
+
+    <!-- Controllers -->
+    <script src="/public/displaySongsController.js"></script>
+    <script src="/public/indexController.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

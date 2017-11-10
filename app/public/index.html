@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html ng-app="songsEvents">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Songs App</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/4-col-portfolio.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    
+
+    <!-- Page Content -->
+    <div class="container" ng-controller="indexController as ctrl">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Songs App
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+        <br>
+        <!-- Projects Row -->
+        <div class="row">
+                <div class="col-md-6 portfolio-item"> 
+                    <a href="" class="btn btn-default btn-lg " ng-click="selectParams('new')">New song played</a>
+                </div>
+                <div class="col-md-6 portfolio-item">
+                    <a href="" class="btn btn-default btn-lg " ng-click="selectParams('list')">List songs played</a>
+                </div>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row" class="footer">
+                <div class="col-lg-12">
+                    <p>Songs App</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Angular -->
+    <script src="/angular/angular.js"></script>
+    <script src="/angularRoute/angular-route.js"></script>
+    <script src="/ui-angular/ui-bootstrap.js"></script>
+    <script src="/ui-angular/ui-bootstrap-tpls.js"></script>
+
+    <!-- App -->
+    <script src="/public/songsEvents.js"></script>
+
+    <!-- Controllers -->
+    <script src="/public/displaySongsController.js"></script>
+    <script src="/public/indexController.js"></script>
+
+
+    <!-- Modal HTML - Post new song -->
+    <script type="text/ng-template" id="newSongModal.html">
+        <div class="modal-header">
+            <h5 class="modal-title">Insert the following data to save the song</h5>
+        </div>
+        <div class="modal-body">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-3" >Time:</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" ng-model='time'>
+                    </div>
+                    <hr>
+                    <label class="control-label col-sm-3" >Artist:</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" ng-model='artist'>
+                    </div>
+                    <label class="control-label col-sm-3" >Album:</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" ng-model='album'>
+                    </div>
+                    <label class="control-label col-sm-3" >Track:</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" ng-model='track'>
+                    </div>
+                    <label class="control-label col-sm-3" >Title:</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" ng-model='title'>
+                    </div>
+                    <label class="control-label col-sm-3" >Uri:</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" ng-model='uri'>
+                    </div>
+                    <label class="control-label col-sm-3" >User:</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" ng-model='user'>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="take_params()">Accept</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+    <!-- Modal HTML - Show already displayed songs -->
+    <script type="text/ng-template" id="listSongsModal.html">
+        <div class="modal-header">
+            <h5 class="modal-title">Introduce search parameters</h5>
+        </div>
+        <div class="modal-body">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-3" >User:</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" ng-model='user'>
+                    </div>
+                    <label class="control-label col-sm-3" >Artist:</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" ng-model='artist'>
+                    </div>
+                    <hr>
+                    <label class="control-label col-sm-3" >Album:</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" ng-model='album'>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="take_params()">Accept</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+
+</body>
+
+</html>
